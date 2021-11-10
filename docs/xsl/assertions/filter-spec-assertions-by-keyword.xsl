@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!--
 
-    Copyright (c) 2018 Oracle and/or its affiliates. All rights reserved.
+    Copyright (c) 2018, 2021 Oracle and/or its affiliates. All rights reserved.
 
     This program and the accompanying materials are made available under the
     terms of the Eclipse Public License v. 2.0, which is available at
@@ -16,7 +16,6 @@
     SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 
 -->
-
 <xsl:stylesheet xmlns:xsl = "http://www.w3.org/1999/XSL/Transform" version = "1.0">
   
   <!--
@@ -27,7 +26,7 @@
     **
     ** This stylesheet works on any XML document that is considered valid against
     ** the following DTD:
-    **   http://invalid.domain.com/CTS/XMLassertions/dtd/spec_assertions.dtd
+    **   https://download.eclipse.org/ee4j/jakartaee-tck/CTS/XMLassertions/dtd/spec_assertions.dtd
     **
     ** The stylesheet contains a user setable parameter called keyword-to-search-on.
     ** This is the keyword searched for in every assertion's keywords list.  Users can
@@ -44,7 +43,7 @@
 
   <xsl:output method="xml"
     indent="yes"
-    doctype-system="http://dummy.domain.com/CTS/XMLassertions/dtd/spec_assertions.dtd"/>
+    doctype-system="https://download.eclipse.org/ee4j/jakartaee-tck/CTS/XMLassertions/dtd/spec_assertions.dtd"/>
   
   <xsl:template match="@*|node()">
     <xsl:copy>
