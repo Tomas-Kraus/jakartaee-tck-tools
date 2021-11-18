@@ -1,0 +1,109 @@
+January 17, 2002
+
+Overview
+--------
+The directory contains an open source XML doclet downloaded from
+sourceforge.net (http://www.sourceforge.net).  The doclet plugs
+into the javadoc documentation tool provided with J2SE.  This
+particular doclet produces an XML document containing the contents
+of a specified set of Java source files.
+
+
+Required Packages
+-----------------
+Users must install (or have installed) J2SE version 1.3 or higher and
+Apache's Ant build tool, version 1.4.1 or higher.  J2SE 1.3 can be
+downloaded from http://java.sun.com/j2se/1.3/.  Apache's Ant can be
+downloaded from http://jakarta.apache.org.  Follow the install
+instructions included with each distribution.
+
+
+Installing The XML Doclet
+-------------------------
+To install the doclet tool follow these steps:
+        - create a directory to install the doclet into
+	- copy the tar/gzip or zip file to the newly created directory
+	- untar/unzip the distribution
+	- modify the build.xml file as described below in the 
+          "Setting-Up XML Doclet" section
+	- run "ant".  The default target is to run the javadoc target
+          which builds the XML javadocs for the source specified in the
+          build.xml file (again see the "Setting-Up XML Doclet" section).
+          Note: to run ant the JAVA_HOME environment variable must be set
+          to point at you J2SE install.  Ant and the XML doclet both use
+          variable so make sure you set it, else ant will not run (you'll
+          get a very specific error message).
+
+
+Supported Ant Targets
+---------------------
+The doclet is built and executed using an ant build file.  Most users will
+not have to use any of these targets but they are listed here for
+completeness.
+The supported targets are:
+	clean:   removes all the built class files as well as the dist
+                 directory
+	compile: builds all the classes that make up the XML doclet
+	dist:    creates the distribution packages for the doclet, this
+                 includes a tar file, a tared/gzipped file and zipped file
+	javadoc  (default target): runs the XML doclet on a specified set
+                 of Java source files, depends on the compile and dist
+                 targets
+
+
+Setting-Up XML Doclet
+---------------------
+Before building or using the doclet, the user must modify the ant build
+file (build.xml) to set the ant properties to appropriate values.  The
+following is a list of properties that the user must set and a brief
+description of what they do.
+
+packages-for-docs: This property denotes the list of packages that the
+		user would like to run the XML doclet on.  The XML doclet
+		will process every class and interface within the packages
+ 		listed by this property.  If the user wants to process more
+		than one package, the package names must be a comma separated
+		list of package names.  Here is an example property:
+  <property name="packages-for-docs" value="javax.xml.rpc,javax.xml.rpc.encoding"/>
+
+output-file:	This propoerty denotes the path and name of the ouput XML
+		file produced by the XML doclet.  The XML doclet will place
+		all the XML output into this one file (even if you have listed
+		multiple packages).  Here is an example property:
+  <property name="output-file" value="/home/jqpublic/dest/javax_xml_rpc.xml"/>
+
+src-path:	This property denotes the base directory that contains the Java
+		source files.  All packages that the user wants to process must
+		exist under this source directory.  Note: the package names listed
+		in the packages-for-docs property must exist under this src-path
+		property.  For instance, if a user wants to process the java.util and
+		java.io packages using the XML doclet and the source code lives in a
+		directory named /usr/src.  This means there must be /usr/src/java/io
+		and /usr/src/java/util directories that contain the classes of the
+		repsective packages.  Here is an example property:
+  <property name="src-path" value="/usr/src"/>
+
+
+Additional Features
+-------------------
+The XML doclet supports a system property called "include.comment.exceptions".
+Normally the XML doclet generates exception elements by looking at the exception
+list of a method signature only.  The javadoc comments are ignored (this was
+originally done to account for poorly maintained javadoc comments).  This is
+still the default behavior.  If the user sets the include.comment.exceptions
+system property (defined in build.xml or overrideen on the command line) to
+true the doclet will include all exceptions found in method signatures plus
+any exceptions found in the javadoc method comments (denoted by the @throws and
+@exception javadoc tags).  If the exception was found in the method signature
+using reflection and is also found in the javadoc method comment, only one
+exception element will be included in the output document (i.e. duplicate
+exceptions in the method signature and javadoc method comments are only
+processed once).
+
+
+Feedback
+--------
+This doclet is a work in progress, It has already been modified several times.
+So if you have any questions or comments (or requests for enhancement) contact
+ryan.oconnell@oracle.com.  This is for internal use only and should not be packaged
+as part of any Sun product.

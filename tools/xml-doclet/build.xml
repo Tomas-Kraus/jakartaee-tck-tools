@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2018, 2021 Oracle and/or its affiliates. All rights reserved.
+
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
+
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
+
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+
+-->
+
+<project name="XML Doclet" default="javadoc" basedir=".">
+
+<!--  <property file="build.properties"/> -->
+
+
+  <!--*********************************-->
+  <!--**** USER DEFINED PROPERTIES ****-->
+  <!--*********************************-->
+  <property name="packages-for-docs" value=""/>
+  <property name="output-file" value=""/>
+  <property name="src-path" value=""/>
+  <property name="include.ctor.exceptions" value="false"/>
+  <property name="include.comment.exceptions" value="false"/>
+  <property name="process.inherited.members" value="false"/>
+  <!--*********************************-->
+  <!--** END USER DEFINED PROPERTIES **-->
+  <!--*********************************-->
+
+  <property name="bin" value="${basedir}/bin"/>
+  <property name="classes" value="${basedir}/classes"/>
+  <property name="src" value="${basedir}/src"/>
+  <property name="dist" value="${basedir}/dist"/>
+  <property name="dist-file" value="xml-doclet"/>
+  <property name="java-tools-jar" value="${JAVA_HOME}/lib/tools.jar"/>
+  <property name="libs" value="${basedir}/libs"/>
+  <property name="xerces-lib" value="${libs}/xerces.jar"/>
+  <property name="master-lib" value="${basedir}/../master-libs"/>
+  <property name="xerces-master-lib" value="${master-lib}/xerces.jar"/>
+
+
+  <target name="clean-libs" if="global-libs-exists">
+    <delete dir="${libs}"/>
+  </target>
+
+  <target name="check-global-libs-exists">
+    <available file="${xerces-master-lib}" property="global-libs-exists"/>
+  </target>
+
+  <target name="clean" depends="check-global-libs-exists">
+    <delete dir="${classes}"/>
+    <delete dir="${dist}"/>
+    <antcall target="clean-libs"/>
+  </target>
+
+  <target name="build-dist-libs" if="global-libs-exists">
+    <mkdir dir="${libs}"/>
+    <copy toDir="${libs}">
+      <fileset dir="${master-lib}" casesensitive="yes">
+        <include name="xerces.jar"/>
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="prepare" depends="check-global-libs-exists">
+    <tstamp/>
+    <mkdir dir="${classes}"/>
+    <copy file="${basedir}/xmldoclet.properties" todir="${classes}"/>
+    <mkdir dir="${dist}"/>
+    <antcall target="build-dist-libs"/>
+  </target>
+
+
+  <target name="compile" depends="prepare">
+    <javac destdir="${classes}" srcdir="${src}" debug="true">
+      <classpath>
+        <pathelement path="${classes}"/>
+        <pathelement location="${xerces-lib}"/>
+        <pathelement location="${java-tools-jar}"/>
+      </classpath>
+    </javac>
+  </target>
+
+
+  <target name="dist" depends="compile">
+    <tar longfile="gnu" tarfile="${dist}/${dist-file}.tar" basedir="${basedir}" excludes="**/*.zip,**/*.tar,**/*.gz"/>
+    <gzip zipfile="${dist}/${dist-file}.tar.gz" src="${dist}/${dist-file}.tar"/>
+    <zip zipfile="${dist}/${dist-file}.zip" basedir="${basedir}" excludes="**/*.zip,**/*.tar,**/*.gz"/>
+  </target> 
+
+
+  <target depends="dist" name="javadoc">
+    <echo message="*** include.comment.exceptions=${include.comment.exceptions}"/>
+    <echo message="*** process.inherited.members=${process.inherited.members}"/>
+  	<echo message="*** include.ctor.exceptions=${include.ctor.exceptions}"/>
+    <javadoc docletpath="${java-tools-jar}:${xerces-lib}" 
+	     packagenames="${packages-for-docs}" 
+             serialwarn="false" verbose="false"
+             additionalparam="&quot;-J-Dprocess.inherited.members=${process.inherited.members}&quot; &quot;-J-Dinclude.comment.exceptions=${include.comment.exceptions}&quot; &quot;-J-Dinclude.ctor.exceptions=${include.ctor.exceptions}&quot; &quot;-J-Djava.compiler=NONE&quot;">
+     <sourcepath path="${src-path}"/>
+     <classpath>
+       <pathelement path="${java-tools-jar}:${xerces-lib}"/>
+     </classpath>
+     <doclet name="nl.xml.doclet.XMLDoclet" path="${classes}">
+       <param name="-file" value="${output-file}"/>
+     </doclet>
+   </javadoc>
+  </target>
+
+</project>

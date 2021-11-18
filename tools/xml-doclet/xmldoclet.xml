@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2018, 2021 Oracle and/or its affiliates. All rights reserved.
+
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
+
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
+
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+
+-->
+<javadoc>
+    <title>Hallo door the None</title>
+    <package name="nl.xml.doclet">
+        <classes>
+            <class modifiers="public" name="XMLUtil">
+                <extends name="Object" package="java.lang"/>
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>Description of the Class</lead>
+                </comment>
+                <fields>
+                    <field modifiers="public static final" name="PREFIX" package="java.lang" type="String">
+                        <comment>
+                            <lead>Description of the Field ui</lead>
+                        </comment>
+                    </field>
+                </fields>
+                <constructors>
+                    <constructor modifiers="public">
+                        <comment/>
+                    </constructor>
+                </constructors>
+                <methods>
+                    <method modifiers="public static" name="packagename">
+                        <comment>
+                            <lead>Description of the Method. </lead>
+                            <detail>Where is nothing that could be of interest to   you!</detail>
+                        </comment>
+                        <parameters>
+                            <parameter name="ped" package="com.sun.javadoc" type="ProgramElementDoc">
+                                <comment>Descr iption of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="java.lang" type="String">
+                            <comment>Description of the Returned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public static" name="className">
+                        <comment>
+                            <lead>Description of the Me thod. </lead>
+                            <detail>Where is nothing that could be of interest to   you!</detail>
+                        </comment>
+                        <parameters>
+                            <parameter name="ped" package="com.sun.javadoc" type="ProgramElementDoc">
+                                <comment>Descrip tion of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="java.lang" type="String">
+                            <comment>Description of the Returned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public static" name="packagename">
+                        <comment>
+                            <lead>Description of the Met hod</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="type" package="com.sun.javadoc" type="Type">
+                                <comment>Descript ion of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="java.lang" type="String">
+                            <comment>Description of the Returned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public static" name="modifiers">
+                        <comment>
+                            <lead>Description ojf the Method</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="ped" package="com.sun.javadoc" type="ProgramElementDoc">
+                                <comment>Description of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="java.lang" type="String">
+                            <comment>Description of the Returned Value</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+            <class modifiers="public" name="XMLField">
+                <extends name="Object" package="java.lang"/>
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>Description of tgfhjhe Class</lead>
+                </comment>
+                <constructors>
+                    <constructor modifiers="public">
+                        <since/>
+                        <comment>
+                            <lead>Constructioor for the rtyXMLField object</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="fielddoc" package="com.sun.javadoc" type="FieldDoc">
+                                <comment>Description obmnf Parameter</comment>
+                            </parameter>
+                        </parameters>
+                    </constructor>
+                </constructors>
+                <methods>
+                    <method modifiers="public" name="toXML">
+                        <since/>
+                        <comment>
+                            <lead>Descoription of the Methoghjtgyd</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="doc" package="org.w3c.dom" type="Document">
+                                <comment>Description of Parametaaertyer</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Node">
+                            <comment>Description of the Retutyurtrned Value</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+            <class modifiers="public" name="XMLParameters">
+                <extends name="Object" package="java.lang"/>
+                <author>Dick Knol</author>
+                <created>11 mei 2001</created>
+                <version>0.1</version>
+                <comment>
+                    <lead>This class isf used for references</lead>
+                </comment>
+                <constructors>
+                    <constructor modifiers="public">
+                        <comment>
+                            <lead>HAHAHAHAHAHAHA</lead>
+                        </comment>
+                        <parameters>
+                            <parameter dimension="[]" name="parameters" package="com.sun.javadoc" type="Parameter"/>
+                            <parameter dimension="[]" name="paramtags" package="com.sun.javadoc" type="ParamTag">
+                                <comment></comment>
+                            </parameter>
+                        </parameters>
+                    </constructor>
+                </constructors>
+                <methods>
+                    <method modifiers="public" name="toXML">
+                        <comment>
+                            <lead>DUS!!!!!!!!!!!!!!!!!!!!!!!!!!!!</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="doc" package="org.w3c.dom" type="Document">
+                                <comment></comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Node">
+                            <comment></comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+            <class modifiers="public" name="XMLComment">
+                <extends name="Object" package="java.lang"/>
+                <author>Dick Knol</author>
+                <created>11 mei 2001</created>
+                <comment>
+                    <lead>This class is used to extract the Comments for the different objects.   </lead>
+                    <detail>A comment consists of 2 parts, a &apos;head&apos; and a &apos;detail&apos;.</detail>
+                </comment>
+                <constructors>
+                    <constructor modifiers="public">
+                        <comment>
+                            <lead>Constructor for the XMLComment object</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="commentdoc" package="com.sun.javadoc" type="Doc">
+                                <comment>The JavaDoc parentDoc.</comment>
+                            </parameter>
+                        </parameters>
+                    </constructor>
+                    <constructor modifiers="public">
+                        <comment>
+                            <lead>Constructor for the XMLComment object</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="commentdoc" package="com.sun.javadoc" type="Doc">
+                                <comment>The JavaDoc parentDoc.</comment>
+                            </parameter>
+                            <parameter name="parentElement" package="org.w3c.dom" type="Element">
+                                <comment>The parentElement.</comment>
+                            </parameter>
+                        </parameters>
+                    </constructor>
+                </constructors>
+                <methods>
+                    <method modifiers="public" name="toXML">
+                        <comment>
+                            <lead>Creates the comment nodes in the XML-file</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="doc" package="org.w3c.dom" type="Document">
+                                <comment>Representing the XML document.</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Node">
+                            <comment>Returns the comment Node.</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+            <class modifiers="public" name="XMLClass">
+                <extends name="Object" package="java.lang"/>
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>This class is used for processing the classes. </lead>
+                    <detail>It can call</detail>
+                    <see class="XMLMethod" package="nl.xml.doclet"/>
+                    <see class="XMLField" package="nl.xml.doclet"/>
+                    <see class="XMLPackage" package="nl.xml.doclet"/>
+                </comment>
+                <constructors>
+                    <constructor modifiers="public">
+                        <since/>
+                        <comment>
+                            <lead>Constructor for the XMLClass object</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="classdoc" package="com.sun.javadoc" type="ClassDoc">
+                                <comment>The doc for this class</comment>
+                            </parameter>
+                        </parameters>
+                    </constructor>
+                </constructors>
+                <methods>
+                    <method modifiers="public" name="toXML">
+                        <since/>
+                        <comment>
+                            <lead>Creates the class nodes in the XML Document</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="doc" package="org.w3c.dom" type="Document">
+                                <comment>The output document</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Node">
+                            <comment>Description of the Returned Value</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+            <class modifiers="public" name="XMLDocument">
+                <extends name="Object" package="java.lang"/>
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>Description 4567of theo Class</lead>
+                </comment>
+                <constructors>
+                    <constructor modifiers="public">
+                        <since/>
+                        <comment>
+                            <lead>Constructor foroithesd XMLDocument object</lead>
+                        </comment>
+                        <parameters>
+                            <parameter dimension="[]" name="packagedocs" package="com.sun.javadoc" type="PackageDoc">
+                                <comment>Descriptihon of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                    </constructor>
+                </constructors>
+                <methods>
+                    <method modifiers="public" name="toXML">
+                        <since/>
+                        <comment>
+                            <lead>Descriioption of thfgdhje Method</lead>
+                        </comment>
+                        <returns package="org.w3c.dom" type="Document">
+                            <comment>Description of thhjgfhe Returned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public" name="toString">
+                        <since/>
+                        <comment>
+                            <lead>Descrioiption of the Metghjod</lead>
+                        </comment>
+                        <returns package="java.lang" type="String">
+                            <comment>Description of the Rdfeturned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public" name="toFile">
+                        <since/>
+                        <comment>
+                            <lead>Desiocription of the Metghjhod</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="filename" package="java.lang" type="String">
+                                <comment>Description ofdfghj Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns type="void"/>
+                    </method>
+                    <method modifiers="public" name="toFile">
+                        <since/>
+                        <comment>
+                            <lead>Descripoition of the Methdfghjod</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="file" package="java.io" type="File">
+                                <comment>Description of Parfghameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns type="void"/>
+                    </method>
+                </methods>
+            </class>
+            <class modifiers="public" name="XMLConstructor">
+                <extends name="Object" package="java.lang"/>
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>This class is used to parse the Constructors.</lead>
+                </comment>
+                <constructors>
+                    <constructor modifiers="public">
+                        <comment>
+                            <lead>Constructor for the XMLConstructor object</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="constructordoc" package="com.sun.javadoc" type="ConstructorDoc">
+                                <comment>Description of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                    </constructor>
+                </constructors>
+                <methods>
+                    <method modifiers="public" name="toXML">
+                        <comment>
+                            <lead>Creates the coustructor nodes for the XML document</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="doc" package="org.w3c.dom" type="Document">
+                                <comment>The XML document</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Node">
+                            <comment>The node pointing to the constructors.</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+            <class modifiers="public" name="XMLInterface">
+                <extends name="Object" package="java.lang"/>
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>Description of the Cldseass</lead>
+                </comment>
+                <constructors>
+                    <constructor modifiers="public">
+                        <since/>
+                        <comment>
+                            <lead>Consttuctor for the XMLInterfafdghjce object</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="interfacedoc" package="com.sun.javadoc" type="ClassDoc">
+                                <comment>Descghjfdghription of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                    </constructor>
+                </constructors>
+                <methods>
+                    <method modifiers="public" name="toXML">
+                        <since/>
+                        <comment>
+                            <lead>Descritption of the Msftghrtethod</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="doc" package="org.w3c.dom" type="Document">
+                                <comment>Description of Parameatdfhsfdyrteer</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Node">
+                            <comment>Description of the Returnughjkyiod Value</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+            <class modifiers="public" name="XMLDoclet">
+                <extends name="Object" package="java.lang"/>
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>Description of these Class</lead>
+                </comment>
+                <methods>
+                    <method modifiers="public static" name="start">
+                        <comment>
+                            <lead>Description of the Moiethod</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="rootdoc" package="com.sun.javadoc" type="RootDoc">
+                                <comment>Description of Paramester</comment>
+                            </parameter>
+                        </parameters>
+                        <returns type="boolean">
+                            <comment>Description of the Returwned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public static" name="validOptions">
+                        <since/>
+                        <comment>
+                            <lead>Descriptioion of the Methoderydfg</lead>
+                        </comment>
+                        <parameters>
+                            <parameter dimension="[][]" name="options" package="java.lang" type="String">
+                                <comment>Description of Parameterd</comment>
+                            </parameter>
+                            <parameter name="reporter" package="com.sun.javadoc" type="DocErrorReporter">
+                                <comment>Description of Parameteqr</comment>
+                            </parameter>
+                        </parameters>
+                        <returns type="boolean">
+                            <comment>Description of the Returwned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public static" name="optionLength">
+                        <since/>
+                        <comment>
+                            <lead>gfhjkgfhjkghjfDescription of the Method k</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="option" package="java.lang" type="String">
+                                <comment>Descgfhjkfghription of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns type="int">
+                            <comment>Description gjfhkfgjof the Returned Value</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+            <class modifiers="public" name="XMLSeeTag">
+                <extends name="Object" package="java.lang"/>
+                <author>Dick Knol</author>
+                <created>11 mei 2001</created>
+                <version>0.1</version>
+                <comment>
+                    <lead>This class is used for references</lead>
+                </comment>
+                <constructors>
+                    <constructor modifiers="public">
+                        <comment>
+                            <lead>JAJAJAJJAAAAAAAAAAAAAAAAAAA.</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="seetag" package="com.sun.javadoc" type="SeeTag">
+                                <comment></comment>
+                            </parameter>
+                        </parameters>
+                    </constructor>
+                </constructors>
+                <methods>
+                    <method modifiers="public" name="toXML">
+                        <comment/>
+                        <parameters>
+                            <parameter name="doc" package="org.w3c.dom" type="Document">
+                                <comment></comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Node">
+                            <comment></comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+            <class modifiers="public" name="XMLMethod">
+                <extends name="Object" package="java.lang"/>
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>Description of t546he Class</lead>
+                </comment>
+                <constructors>
+                    <constructor modifiers="public">
+                        <since/>
+                        <comment>
+                            <lead>Constructor for the XMLts4e65Method object</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="methoddoc" package="com.sun.javadoc" type="MethodDoc">
+                                <comment>Descryuiption of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                    </constructor>
+                </constructors>
+                <methods>
+                    <method modifiers="public" name="toXML">
+                        <since/>
+                        <comment>
+                            <lead>Description of the e45673ethod</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="doc" package="org.w3c.dom" type="Document">
+                                <comment>Description of Paraetyumeter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Node">
+                            <comment>Description of the 5476Returned Value</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+            <class modifiers="public" name="XMLPackage">
+                <extends name="Object" package="java.lang"/>
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>Description of etyruthe Class</lead>
+                </comment>
+                <constructors>
+                    <constructor modifiers="public">
+                        <since/>
+                        <comment>
+                            <lead>Constructor for the XMLPackage oytutject</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="packagedoc" package="com.sun.javadoc" type="PackageDoc">
+                                <comment>Description of Paertyurameter</comment>
+                            </parameter>
+                        </parameters>
+                    </constructor>
+                </constructors>
+                <methods>
+                    <method modifiers="public" name="toXML">
+                        <since/>
+                        <comment>
+                            <lead>we   Description oertf the4567457 Method</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="doc" package="org.w3c.dom" type="Document">
+                                <comment>Description ofryuert Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Node">
+                            <comment>Description of thuue Returned Value</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+        </classes>
+    </package>
+    <package name="nl.xml.parse">
+        <classes>
+            <class modifiers="public" name="XercesXMLParser">
+                <extends name="Object" package="java.lang"/>
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>Description of the Cltyass</lead>
+                </comment>
+                <constructors>
+                    <constructor modifiers="public">
+                        <since/>
+                        <comment>
+                            <lead>Constructor for rtythe XercesXMLParser object</lead>
+                        </comment>
+                    </constructor>
+                </constructors>
+                <methods>
+                    <method modifiers="public" name="newDocument">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Mertywthod</lead>
+                        </comment>
+                        <returns package="org.w3c.dom" type="Document">
+                            <comment>Description of the Returned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public" name="parse">
+                        <since/>
+                        <comment>
+                            <lead>Description of theewrt Method</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="string" package="java.lang" type="String">
+                                <comment>Descripetetion of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Document">
+                            <comment>Descriptrtion of the Returned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public" name="parse">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Meertthod</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="instream" package="java.io" type="InputStream">
+                                <comment>Descriertption of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Document">
+                            <comment>Descriperttion of the Returned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public" name="parse">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Meterwodj</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="reader" package="java.io" type="Reader">
+                                <comment>Descrdniption of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Document">
+                            <comment>Descriptiovbn of the Returned Value</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+            <class modifiers="public" name="XMLParserFactory">
+                <extends name="Object" package="java.lang"/>
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>Description of theytu Class</lead>
+                </comment>
+                <methods>
+                    <method modifiers="public" name="createXMLParser">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Method</lead>
+                        </comment>
+                        <returns package="nl.xml.parse" type="XMLParser">
+                            <comment>Description of the Returned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public static" name="getInstance">
+                        <since/>
+                        <comment>
+                            <lead>Gets the Instance attribute of the XMLParserFactory class</lead>
+                        </comment>
+                        <returns package="nl.xml.parse" type="XMLParserFactory">
+                            <comment>The Instance value</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+        </classes>
+        <interfaces>
+            <interface modifiers="public " name="XMLParser">
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>Description of the Interfacetry</lead>
+                </comment>
+                <methods>
+                    <method modifiers="public" name="newDocument">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Methodyud4</lead>
+                        </comment>
+                        <returns package="org.w3c.dom" type="Document">
+                            <comment>Description of the Returned Val75ue</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public" name="parse">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Meth56od</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="string" package="java.lang" type="String">
+                                <comment>Description of Paramkkhter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Document">
+                            <comment>Description of the Returnfdsed Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public" name="parse">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Meth345od</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="instream" package="java.io" type="InputStream">
+                                <comment>Descr745iption of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Document">
+                            <comment>Descriyutption of the Returned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public" name="parse">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Method546</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="reader" package="java.io" type="Reader">
+                                <comment>Descriptiutyon of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="org.w3c.dom" type="Document">
+                            <comment>Descripti7on of the Returned Value</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </interface>
+        </interfaces>
+    </package>
+    <package name="nl.xml.serialize">
+        <classes>
+            <class modifiers="public" name="XMLSerializerFactory">
+                <extends name="Object" package="java.lang"/>
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>Description of thfghje Class</lead>
+                </comment>
+                <methods>
+                    <method modifiers="public" name="createXMLSerializer">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Methfghod</lead>
+                        </comment>
+                        <returns package="nl.xml.serialize" type="XMLSerializer">
+                            <comment>Description of erthe Returned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public static" name="getInstance">
+                        <since/>
+                        <comment>
+                            <lead>rty   Gets the Instance attrrtyibute of the XMLSerializerFactory class</lead>
+                        </comment>
+                        <returns package="nl.xml.serialize" type="XMLSerializerFactory">
+                            <comment>The Instance vrtyalue</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+            <class modifiers="public" name="XercesXMLSerializer">
+                <extends name="Object" package="java.lang"/>
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>Description of tyuthe Class</lead>
+                </comment>
+                <constructors>
+                    <constructor modifiers="public">
+                        <since/>
+                        <comment>
+                            <lead>Constructor for the XercesXMLjhklSerializer object</lead>
+                        </comment>
+                    </constructor>
+                </constructors>
+                <methods>
+                    <method modifiers="public" name="defaultOutputFormat">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Metfgjdfgod</lead>
+                        </comment>
+                        <returns package="org.apache.xml.serialize" type="OutputFormat">
+                            <comment>Description of the Retkghrned Value</comment>
+                        </returns>
+                    </method>
+                    <method modifiers="public" name="serialize">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Methodghj f</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="document" package="org.w3c.dom" type="Document">
+                                <comment>Descrifjgption of Parameter</comment>
+                            </parameter>
+                            <parameter name="outstream" package="java.io" type="OutputStream">
+                                <comment>Descripftion of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns type="void"/>
+                    </method>
+                    <method modifiers="public" name="serialize">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Methodjg</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="document" package="org.w3c.dom" type="Document">
+                                <comment>Description of Parametter</comment>
+                            </parameter>
+                            <parameter name="writer" package="java.io" type="Writer">
+                                <comment>Descriptiodgtn of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns type="void"/>
+                    </method>
+                    <method modifiers="public" name="toString">
+                        <since/>
+                        <comment>
+                            <lead>Descriptionrr of the Method</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="document" package="org.w3c.dom" type="Document">
+                                <comment>Description of Paramujeter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="java.lang" type="String">
+                            <comment>Description of the Retfurned Value</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </class>
+        </classes>
+        <interfaces>
+            <interface modifiers="public " name="XMLSerializer">
+                <author>Jonathan van Alteren</author>
+                <created>24 april 2001</created>
+                <comment>
+                    <lead>Description of the Interface55</lead>
+                </comment>
+                <methods>
+                    <method modifiers="public" name="serialize">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Methoderg</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="document" package="org.w3c.dom" type="Document">
+                                <comment>Descriptghfion of Parameter</comment>
+                            </parameter>
+                            <parameter name="outstream" package="java.io" type="OutputStream">
+                                <comment>Description of Parayyemeter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns type="void"/>
+                    </method>
+                    <method modifiers="public" name="serialize">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Methoey</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="document" package="org.w3c.dom" type="Document">
+                                <comment>Description otef Parameter</comment>
+                            </parameter>
+                            <parameter name="writer" package="java.io" type="Writer">
+                                <comment>Descriptighon of Parameter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns type="void"/>
+                    </method>
+                    <method modifiers="public" name="toString">
+                        <since/>
+                        <comment>
+                            <lead>Description of the Methghwod</lead>
+                        </comment>
+                        <parameters>
+                            <parameter name="document" package="org.w3c.dom" type="Document">
+                                <comment>Description of Paramyyeter</comment>
+                            </parameter>
+                        </parameters>
+                        <returns package="java.lang" type="String">
+                            <comment>Description of the Returnwred Value</comment>
+                        </returns>
+                    </method>
+                </methods>
+            </interface>
+        </interfaces>
+    </package>
+</javadoc>
+
